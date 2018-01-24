@@ -1,25 +1,13 @@
 
 package com.reactlibrary;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.net.Uri;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
+import android.provider.MediaStore;
 import android.util.Base64;
-import android.util.DisplayMetrics;
-import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -43,13 +31,16 @@ public class RNImgToBase64Module extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getBase64String(String uri, Callback callback) {
     try {
-      Bitmap image = MediaStore.Images.Media.getBitmap(this.context.getContentResolver(), Uri.parse(uri));
+      Bitmap image = MediaStore.Images.Media.getBitmap(reactContext.getContentResolver(), Uri.parse(uri));
       if (image == null) {
         callback.invoke("Failed to decode Bitmap, uri: " + uri);
       } else {
         callback.invoke(null, bitmapToBase64(image));
       }
-    } catch (IOException e) {
+    } catch (Error e) {
+      e.printStackTrace();
+    } catch (Exception e) {
+      e.printStackTrace();
     }
   }
 
