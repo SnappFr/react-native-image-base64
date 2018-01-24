@@ -1,8 +1,8 @@
 
 {
-  "name": "react-native-img-to-base64",
+  "name": "react-native-image-base64",
   "version": "0.1.0",
-  "description": "Convert img to base64",
+  "description": "Convert image to base64",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
