@@ -1,5 +1,5 @@
 
-# Simple and crossplatform image to base64 conversion
+# react-native-convert-image-to-base64
 
 This repo is a working rewrite of [this](https://github.com/xfumihiro/react-native-image-to-base64) abandonned library.
 It provides a very simple way to convert an image to a base64 string.
