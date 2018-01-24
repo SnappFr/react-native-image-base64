@@ -1,6 +1,6 @@
 
 {
-  "name": "react-native-image-base64",
+  "name": "react-native-convert-image-to-base64",
   "version": "0.1.0",
   "description": "Convert image to base64",
   "main": "index.js",
