@@ -1,8 +1,11 @@
 
 # react-native-img-to-base64
 
-This repo is a working rewrite of (https://github.com/xfumihiro/react-native-image-to-base64)[this] abandonned library.
+This repo is a working rewrite of [this](https://github.com/xfumihiro/react-native-image-to-base64) abandonned library.
 It provides a very simple way to convert an image to a base64 string.
+
+If you encounter `OOM` errors on old android devices, make sure you optimize the image's size before you convert it. 
+Indeed working with big images on Android might cause very high memory usage.
 
 ## Getting started
 
