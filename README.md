@@ -22,6 +22,8 @@ or
 ```javascript
 import ImgToBase64 from 'react-native-image-base64';
 
-ImgToBase64.getBase64String('file://youfileurl', (err, base64string) => doSomethingWith(base64string));
+ImgToBase64.getBase64String('file://youfileurl')
+  .then(base64String => doSomethingWith(base64String))
+  .catch(err => doSomethingWith(err));
 ```
   
