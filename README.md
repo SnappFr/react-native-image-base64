@@ -1,5 +1,5 @@
 
-# react-native-convert-image-to-base64
+# react-native-image-base64
 
 This repo is a working rewrite of [this](https://github.com/xfumihiro/react-native-image-to-base64) abandonned library.
 It provides a very simple way to convert an image to a base64 string.
@@ -9,18 +9,18 @@ Indeed working with big images on Android might cause very high memory usage.
 
 ## Getting started
 
-`npm install react-native-convert-image-to-base64 --save`
+`npm install react-native-image-base64 --save`
 or
-`yarn add react-native-convert-image-to-base64`
+`yarn add react-native-image-base64`
 
 
 ## Installation
 
-`$ react-native link react-native-convert-image-to-base64`
+`$ react-native link react-native-image-base64`
 
 ## Usage
 ```javascript
-import ImgToBase64 from 'react-native-convert-image-to-base64';
+import ImgToBase64 from 'react-native-image-base64';
 
 ImgToBase64.getBase64String('file://youfileurl', (err, base64string) => doSomethingWith(base64string));
 ```
