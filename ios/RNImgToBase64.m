@@ -10,11 +10,14 @@
 RCT_EXPORT_MODULE()
 
 #pragma mark getBase64String
-RCT_EXPORT_METHOD(getBase64String:(NSURL*)url callback:(RCTResponseSenderBlock)callback) {
+RCT_EXPORT_METHOD(getBase64String:(NSURL*)url
+    resolve:(RCTPromiseResolveBlock)resolve
+    rejecter:(RCTPromiseRejectBlock)reject
+) {
     dispatch_async(dispatch_queue_create("image_processing", 0), ^{
         NSData* data = [NSData dataWithContentsOfURL:url];
         dispatch_async(dispatch_get_main_queue(), ^{
-            callback(@[[NSNull null], [data base64EncodedStringWithOptions:0]]);
+            resolve([data base64EncodedStringWithOptions:0]);
         });
     });
 }

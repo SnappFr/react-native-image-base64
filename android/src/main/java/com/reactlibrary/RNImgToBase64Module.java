@@ -12,7 +12,7 @@ import java.io.IOException;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
 
 public class RNImgToBase64Module extends ReactContextBaseJavaModule {
 
@@ -29,13 +29,13 @@ public class RNImgToBase64Module extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void getBase64String(String uri, Callback callback) {
+  public void getBase64String(String uri, Promise promise) {
     try {
       Bitmap image = MediaStore.Images.Media.getBitmap(reactContext.getContentResolver(), Uri.parse(uri));
       if (image == null) {
-        callback.invoke("Failed to decode Bitmap, uri: " + uri);
+        promise.reject("Error", "Failed to decode Bitmap, uri: " + uri);
       } else {
-        callback.invoke(null, bitmapToBase64(image));
+        promise.resolve(bitmapToBase64(image));
       }
     } catch (Error e) {
       e.printStackTrace();
