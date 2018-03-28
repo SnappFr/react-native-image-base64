@@ -1,5 +1,5 @@
 
-package com.reactlibrary;
+package fr.snapp.imagebase64;
 
 import android.graphics.Bitmap;
 import android.net.Uri;

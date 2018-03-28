@@ -1,5 +1,5 @@
 
-package com.reactlibrary;
+package fr.snapp.imagebase64;
 
 import java.util.Arrays;
 import java.util.Collections;
