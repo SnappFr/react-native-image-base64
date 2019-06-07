@@ -12,5 +12,6 @@
     "base64"
   ],
   "author": "Snapp",
-  "license": "MIT"
+  "license": "MIT",
+  "types": "./index.d.ts"
 }
