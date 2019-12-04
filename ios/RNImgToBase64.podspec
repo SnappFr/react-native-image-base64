@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                     Convert img to base64
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/Snapp-FidMe/react-native-img-to-base64#Readme"
   s.license      = "MIT"
   s.author       = { "author" => "contact@snapp.fr" }
   s.platform     = :ios, "7.0"
