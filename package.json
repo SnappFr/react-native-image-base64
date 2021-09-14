@@ -1,7 +1,7 @@
 {
   "name": "react-native-image-base64-png",
-  "version": "0.1.8",
-  "description": "Convert image to base64 PNG",
+  "version": "0.1.9",
+  "description": "Convert PNG images to base64",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,6 @@
     "url": "https://github.com/tommyrharper/react-native-image-base64-png"
   },
   "author": "Snapp",
-  "license": "MIT"
+  "license": "MIT",
+  "types": "./index.d.ts"
 }

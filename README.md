@@ -1,7 +1,7 @@
 
 # react-native-image-base64-png
 
-This is a fork of [this](https://github.com/Snapp-FidMe/react-native-image-base64) library, modified to support png on android.
+This is a fork of [this](https://github.com/Snapp-FidMe/react-native-image-base64) library, modified to support png on android and export typescript types.
 
 That repo in turn is a working rewrite of [this](https://github.com/xfumihiro/react-native-image-to-base64) abandoned library.
 It provides a very simple way to convert an image to a base64 string.
@@ -14,12 +14,21 @@ Indeed working with big images on Android might cause very high memory usage.
 This package has been updated based on [this](https://github.com/Snapp-FidMe/react-native-image-base64/issues/4) thread.
 
 Simply put, `android/src/java/RNImgToBase64Module.java` has been changed as follows:
-```
+```java
 bitmap.compress(Bitmap.CompressFormat.JPEG, 80, byteArrayOutputStream);
 ```
 To:
-```
+```java
 bitmap.compress(Bitmap.CompressFormat.PNG, 80, byteArrayOutputStream);
+```
+
+I have also added types in `index.d.ts`:
+```typescript
+declare module 'react-native-image-base64' {
+  export default class ImgToBase64 {
+    static getBase64String(filePath: string): Promise<string>;
+  }
+}
 ```
 
 ## Getting started
