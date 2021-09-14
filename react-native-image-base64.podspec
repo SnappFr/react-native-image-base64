@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.name          = package["name"]
   s.version       = package["version"]
   s.summary       = package["description"]
-  s.homepage      = "https://github.com/Snapp-FidMe/react-native-img-to-base64"
+  s.homepage      = "https://github.com/tommyrharper/react-native-image-base64-png"
   s.license       = package["license"]
   s.authors       = package["author"]
   s.platform      = :ios, "9.0"
