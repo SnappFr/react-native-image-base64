@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-base64-png",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Convert image to base64 PNG",
   "main": "index.js",
   "scripts": {
